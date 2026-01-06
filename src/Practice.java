@@ -75,13 +75,12 @@ public class Practice {
       counterMap.put(num, counterMap.getOrDefault(num, 0) + 1);
     }
 
-    int mostCommon = 0;
+    int mostCommon = nums[0];
 
-    for(int num: counterMap.values()){
-      if(num > mostCommon){
+    for(int num: counterMap.keySet()){
+      if(counterMap.get(num) > counterMap.get(mostCommon)){
         mostCommon = num;
       }
-
     }
 
     return mostCommon;
