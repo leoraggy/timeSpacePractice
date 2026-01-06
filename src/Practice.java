@@ -71,6 +71,10 @@ public class Practice {
     // in O(n) time. n = nums.size()
     Map<Integer, Integer> counterMap = new LinkedHashMap<>();
 
+    if(nums.length < 1){
+      return 0;
+    }
+
     for(int num: nums){
       counterMap.put(num, counterMap.getOrDefault(num, 0) + 1);
     }

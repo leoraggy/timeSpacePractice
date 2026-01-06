@@ -14,6 +14,13 @@ public class PracticeTest {
   }
 
   @Test
+  void testMostCommonTimeEfficientWithEmptyArray(){
+    int[] num = {};
+    int actual = Practice.mostCommonTimeEfficient(num);
+    assertEquals(actual, 0);
+  }
+
+  @Test
   void  testMostCommonSpaceEfficient(){
     int[] num = {1,2,3,3,3,2,2,2,2};
     int actual = Practice.mostCommonSpaceEfficient(num);
