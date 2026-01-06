@@ -17,8 +17,8 @@ public class Practice {
     return evens;
   }
 
-  // Time Complexity:
-  // Space Complexity: 
+  // Time Complexity: O(n) where n is the length of the matrix
+  // Space Complexity: O(1) where 1 represents the number of constant variables
   public static int sumDiagonal(int[][] matrix) {
     int sum = 0;
     for (int i = 0; i < matrix.length; i++) {
