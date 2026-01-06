@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -68,7 +68,22 @@ public class Practice {
   public static int mostCommonTimeEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(n) time. n = nums.size()
-    return -1;
+    Map<Integer, Integer> counterMap = new LinkedHashMap<>();
+
+    for(int num: nums){
+      counterMap.put(num, counterMap.getOrDefault(num, 0) + 1);
+    }
+
+    int mostCommon = 0;
+
+    for(int num: counterMap.values()){
+      if(num > mostCommon){
+        mostCommon = num;
+      }
+
+    }
+
+    return mostCommon;
   }
 
   /**
